@@ -1,0 +1,216 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+%\usepackage[big]{layaureo} 				%better formatting of the A4 page
+\usepackage{fullpage}
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{enumitem}           % to change itemize margins
+\setlist[itemize]{leftmargin=0.25cm}
+\usepackage{longtable}			 % for multipage tables
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Rahul \textsc{Dhodapkar}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal}
+
+\begin{tabular}{rl}
+    \textsc{Address:}   & 128 MacDougal Street, \#1C, New York, NY 10012 \\
+    \textsc{Phone:}      & +1 347 5633757\\
+    \textsc{Email:}       & \href{mailto:rahul.m.dhodapkar@gmail.com}{rahul.m.dhodapkar@gmail.com}\\
+    \textsc{Website:}   & \href{http://www.rahuldhodapkar.com}{www.rahuldhodapkar.com}
+\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+ \textsc{May} 2015 & Bachelor of Science in \
+ \textsc{Computer Science}, \textbf{Yale University}, New Haven, CT\\
+&\small\emph{distinction in the major}, \normalsize \textsc{Gpa}: 3.76/4.0\\
+\\
+\textsc{May} 2011 & High School,\
+ \normalsize \textbf{Hopkins School}, New Haven, CT\\
+&\small\emph{cum laude}, \normalsize \textsc{Gpa}: 10.4/12.0\\
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work}
+\begin{longtable}{r|p{11cm}}
+ \nopagebreak \textsc{Current} & Consulting Engineer at \textsc{MongoDB Inc.}, New York \\
+ \nopagebreak \textsc{Aug 2015} &\footnotesize{
+	\begin{itemize}
+		\item[]{
+			Assisted clients in information architecture and infrastructure design.
+		}
+		\item[]{
+			Published material as technical contributor on mongodb.com blog.
+		}
+		\item[]{
+			Prototyped a new query optimization system for the core MongoDB kernel,
+			implementing techniques described in the database literature based on 
+			machine learning.
+		}
+	\end{itemize}
+   }\\
+ \multicolumn{2}{c}{} \\
+ \nopagebreak \textsc{July 2014} & Software Engineering Intern \textsc{MongoDB Inc.}, New York\\
+ \nopagebreak \textsc{May 2014} &\footnotesize{
+	\begin{itemize}
+		\item[]{
+			Assisted clients in information architecture and infrastructure design.
+		}
+		\item[]{
+			Published material as technical contributor on mongodb.com blog.
+		}
+		\item[]{
+			Prototyped a new query optimization system for the core MongoDB kernel,
+			implementing techniques described in the database literature based on 
+			machine learning.
+		}
+	\end{itemize}
+   }\\
+ \multicolumn{2}{c}{} \\
+ \nopagebreak \textsc{July 2013} & Research and Development Intern at \textsc{Epic Systems}, Madison\\
+ \nopagebreak \textsc{May 2013} &\footnotesize{
+	\begin{itemize}
+		\item[]{
+			Headed a team of 3 interns coordinating a full-stack project using
+			machine learning to predict diagnoses for ambiguously presenting patients.
+		}
+		\item[]{
+			Built a web-application to mine patient information data across hospitals
+			using Epic to connect physicians and support them in diagnosis.
+		}
+	\end{itemize}
+   }\\
+ \multicolumn{2}{c}{} \\
+ \nopagebreak \textsc{July 2012} & Software Development Intern at \textsc{VantageLocal}, Palo Alto \\		
+ \nopagebreak \textsc{May 2012} & \small\emph{(now \textsc{Frequence})} \\
+ \nopagebreak & \footnotesize{
+	\begin{itemize}
+		\item[]{
+			Developed a web application for demonstrating the power and scope of
+			locally targeted advertising based on the real time bid (RTB) system.
+		}
+		\item[]{
+			Built a web-application to mine patient information data across hospitals
+			using Epic to connect physicians and support them in diagnosis.
+		}
+	\end{itemize}
+   }\\
+ \multicolumn{2}{c}{} \\
+ \nopagebreak \textsc{Feb 2012} & Research Associate at \textsc{Yale Department of Genetics}, New Haven \\
+ \nopagebreak \textsc{May 2008} & \small\emph{Lab of \textsc{Dr. Matthew State}} \\
+ \nopagebreak & \footnotesize{
+	\begin{itemize}
+		\item[]{
+			Wrote Markov-Chain-Monte-Carlo algorithms for copy number variation prediction
+			in multiplex families with autism.
+		}
+		\item[]{
+			Built a web-application to mine patient information data across hospitals
+			using Epic to connect physicians and support them in diagnosis.
+		}
+	\end{itemize}
+   }\\
+\end{longtable}
+
+%Section: Volunteer work
+\section{Volunteering}
+
+%Section: Scholarships and additional info
+\section{Publications}
+\begin{tabular}{rp{11cm}}
+ \textsc{Jan} 2017 & VeriConf: Synthesizing Configuration Rules through Association Rule Learning\\
+ 								& \small\emph{Submitted, currently under review} \\
+ 							    & \textsc{[Computer Aided Verification]} \textsc{[co-author]} \\
+\multicolumn{2}{c}{} \\
+ \textsc{Jun} 2011 & Recurrent de novo copy number variations (CNVs) at 7q11.23, 15q11.2-13.1, 16p11.2, and the Neurexin 1 (NXRN1) locus are strongly associated with simplex autism. (PubMed: \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3939065/}{PMC3939065}) \\
+ 							   & \textsc{[Neuron]} \textsc{[co-author]} 
+\end{tabular}
+
+%Section: Scholarships and additional info
+\section{Scholarships and Certificates}
+\begin{tabular}{rl}
+\end{tabular}
+
+%Section: Languages
+\section{Languages}
+\begin{tabular}{rl}
+\textsc{Spanish:}&Proficient\\
+\textsc{Hindi:}&Proficient\\
+\textsc{Korean:}&Basic\\
+\end{tabular}
+
+\section{Programming and Information Systems}
+\begin{tabular}{rl}
+\end{tabular}
+
+\section{Interests and Activities}
+
+\end{document}
