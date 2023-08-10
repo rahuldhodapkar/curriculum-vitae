@@ -1,6 +1,7 @@
 \documentclass[a4paper,10pt]{article}
 
 %A Few Useful Packages
+\usepackage{longtable}
 \usepackage{marvosym}
 \usepackage{fontspec} 					%for loading fonts
 \usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
@@ -102,6 +103,16 @@ ItalicFont = Fontin-Italic.otf
 %Section: Work Experience at the top
 \section{Work}
 \begin{longtable}{r|p{11cm}}
+ \nopagebreak \textsc{Current} & Resident Physician at \textsc{Keck School of Medicine}\\
+ \nopagebreak \textsc{June 2023} & \small{Los Angeles, CA, USA} \\
+ \nopagebreak & \footnotesize{
+	\begin{itemize}
+		\item[]{
+			Resident physician in ophthalmology at Keck School of Medicine and LA General Medical Center.
+		}
+	\end{itemize}
+   }\\
+ \multicolumn{2}{c}{} \\
  \nopagebreak \textsc{Sep 2022} & Neuroinflammation Research Fellow at \textsc{Yale School of Medicine}\\
  \nopagebreak \textsc{Sep 2021} & \small{New Haven, CT, USA} \\
  \nopagebreak & \footnotesize{
@@ -113,7 +124,7 @@ ItalicFont = Fontin-Italic.otf
 			Mentored undergraduate and postgraduate students, training them in laboratory techniques as well as scientific knowledge and approach.
 		}
 		\item[]{
-			Contributed to analysis and experimental design for project to characterize microglial involvement in the development of age-related macular degeneration (AMD) and compare it to other neurodegenrative disorders.
+			Contributed to analysis and experimental design for project to characterize microglial involvement in the development of age-related macular degeneration (AMD) and compare it to other neurodegenerative disorders.
 		}
 	\end{itemize}
    }\\
@@ -298,10 +309,14 @@ variant (CNV) analysis of genotyping data.
 \end{tabular}
 
 \section{Articles}
-\begin{tabular}{rp{11cm}}
- \textit{\textsc{In Press}}& Kuchroo M, DiStasio M, Calapkulu E, Ige M, Zhang L, Sheth AH, Menon M, Xing Y, Gigante S, Huang J, {\bf Dhodapkar RM}, Bastian R, Wolf G, Krishnaswamy S, Hafler BP. {\it Topological analysis of single-cell data reveals shared glial landscape of macular degeneration and neurodegenerative diseases.} \\
+\begin{longtable}{rp{11cm}}
+\textit{\textsc{In Press}}& Klein J*, Wood J*, Jaycox J*, {\bf Dhodapkar RM}*, Lu P*, Gelhausen JR*, Tabachnikova A*, Greene K, Tabacof L, Malik AA, Monteiro VS, Silva J, Kamath K, Zhang M, Dahl A, Ott I, Valle G, Pena-Hernandez M, Mao T, Bhattacharjee B, Takahashi T, Lucas C, Song E, Mccarthy D, Breyman E, Tosto-Mancuso J, Dai Y, Perotti E, Akduman K, Tzeng TJ, Xu L, Geraghty AC, Monje M, Yildirim I, Shon J, Medzhitov R, Lutchmansingh D, Possick J, Kaminski N, Omer SB, Krumholz HM, Guan L, Dela Cruz CS, van Dijk D$\dag$, Ring AM$\dag$, Putrino D$\dag$, Iwasaki A$\dag$. {\it Distinguishing features of Long COVID identified through immune profiling.} Nature. \\
+\textit{\textsc{In Press}}& Dong M, Wang B, Wei J, Fonseca A, Perry C, Ouerghi F, Foxman EF$\dag$, Ishizuka JJ$\dag$, {\bf Dhodapkar RM}$\dag$, van Dijk D$\dag$. {\it Causal identification of single-cell experimental perturbation effects with CINEMA-OT.} Nature Methods. \\
 \multicolumn{2}{c}{} \\
- \textit{\textsc{Mar} 2023}& Ascunce K, {\bf Dhodapkar RM}, Huang D, Hafler BP. Innate immune biology in age-related macular degeneration. Frontiers in Cell and Developmental Biology. 2023;11.
+\multicolumn{2}{c}{} \\
+ \textit{\textsc{May} 2023}& Kuchroo M, DiStasio M, Song E, Calapkulu E, Zhang L, Ige M, Sheth AH, Majdoubi A, Menon M, Tong A, Godavarthi A, Xing Y, Gigante S, Steach H, Huang J, Huguet G, Narain J, You K, Mourgkos G, {\bf Dhodapkar RM}, Hirn MJ, Bastian R, Wolf G, Krishnaswamy S$\dag$, Hafler BP$\dag$. {\it Single-cell analysis reveals inflammatory interactions driving macular degeneration.} Nature Communications. 2023 Mar 5. \\
+\multicolumn{2}{c}{} \\
+ \textit{\textsc{Mar} 2023}& Ascunce K, {\bf Dhodapkar RM}, Huang D, Hafler BP. {\it Innate immune biology in age-related macular degeneration.} Frontiers in Cell and Developmental Biology. 2023;11.
  \\
 \multicolumn{2}{c}{} \\
  \textit{\textsc{Mar} 2023}& {\bf Dhodapkar RM}, Jin A, Liu J. {\it Acute Pain Management Protocol for Ophthalmic Procedures.} In First Aid Perioperative Ultrasound: Acute Pain Manual for Surgical Procedures 2023 Mar 3 (pp. 291-311). Cham: Springer International Publishing.
@@ -323,21 +338,16 @@ File Specifications with Association Rule Learning.} Proc. ACM Program. Lang. 1,
 (October 2017), 20 pages. https://doi.org/10.1145/3133888 \\
 \multicolumn{2}{c}{} \\
  \textsc{Jun} 2011 & Sanders SJ, Ercan-Sencicek AG, Hus V, Luo R, Murtha MT, Moreno-De-Luca D, Chu SH, Moreau MP, Gupta AR, Thomson SA, Mason CE, Bilguvar K, Celestino-Soper PB, Choi M, Crawford EL, Davis L, Wright NR, {\bf Dhodapkar RM}, ..., State MW. {\it Multiple recurrent de novo CNVs, including duplications of the 7q11.23 Williams syndrome region, are strongly associated with autism.} Neuron. 2011 Jun 9;70(5):863-85. doi: 10.1016/j.neuron.2011.05.002. 
-\end{tabular}
+\end{longtable}
 
 \section{Preprints}
 \begin{tabular}{rp{11cm}}
  \textit{\textsc{Jan} 2023}& {\bf Dhodapkar RM.} {\it A deep generative model of the SARS-CoV-2 spike protein predicts future variants.} bioRxiv. 2023:2023-01. \\
 \multicolumn{2}{c}{} \\
- \textit{\textsc{Aug} 2022}& Klein J*, Wood J*, Jaycox J*, Lu P*, {\bf Dhodapkar RM*}, Gehlhausen JR*, Tabachnikova A*, ..., Dijk DV, Ring A, Putrino D, Iwasaki A., {\it Distinguishing features of Long COVID identified through immune profiling.} medRxiv. 2022:2022-08.\\
-\multicolumn{2}{c}{} \\
  \textit{\textsc{Oct} 2022}& Rizvi SA, Nguyen N, Lyu H, Christensen B, Caro JO, Zappala E, Brbic M, {\bf Dhodapkar RM*}, Dijk DV.* {\it AMPNet: Attention as Message Passing for Graph Neural Networks.} arXiv preprint arXiv:2210.09475. 2022 Oct 17.
  \\
 \multicolumn{2}{c}{} \\
  \textit{\textsc{Sep} 2022}& {\bf Dhodapkar RM.} {\it Representing cells as sentences enables natural-language processing for single-cell transcriptomics.} bioRxiv. 2022:2022-09.
- \\
-\multicolumn{2}{c}{} \\
- \textit{\textsc{Aug} 2022}& Dong M, Wang B, Wei J, de O. Fonseca AH, Perry C, Frey A, Ouerghi F, Foxman EF*, Ishizuka JJ*, {\bf Dhodapkar RM*}, van Dijk D.* Causal identification of single-cell experimental perturbation effects with CINEMA-OT. bioRxiv. 2022 Aug 1:2022-07.
  \\
 \multicolumn{2}{c}{}
 \end{tabular}
